@@ -1,0 +1,32 @@
+{
+  "name": "libskein-wasm",
+  "version": "1.0.0",
+  "description": "Implementation of the Skein hash function from Doug Whiting as WASM module.",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "build-wa": "wa compile -D __WEBASSEMBLY__ -l -O src/skein.c -I./include -o ./dist/wa/skein.wasm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbIkola/libskein.git"
+  },
+  "keywords": [
+    "skein",
+    "wasm",
+    "webassembly",
+    "слабоумие и отвага"
+  ],
+  "author": "Nickolay \"mbIkola\" Kharchevin <kharchevyn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbIkola/libskein/issues"
+  },
+  "homepage": "https://github.com/mbIkola/libskein#readme",
+  "devDependencies": {
+    "webassembly": "^0.11.0"
+  }
+}
