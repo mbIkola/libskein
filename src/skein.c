@@ -2041,7 +2041,7 @@ SkeinHashReturn skein(int hashbitlen, const SkeinBitSequence *data, /* all-in-on
 }
 
 
-
-__attribute__((visibility ("default"))) void skein256(const unsigned char *input, size_t input_len, unsigned char *output) {
+void  __attribute__((used))  __attribute__((visibility("default"))) EMSCRIPTEN_KEEPALIVE
+skein256(const unsigned char *input, size_t input_len, unsigned char *output) {
 	skein(256, input, input_len*8, output);
 }
